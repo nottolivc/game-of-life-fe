@@ -1,0 +1,213 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  /* background: white; */
+  /* background-image: url("https://www.vanseodesign.com/blog/wp-content/uploads/2011/10/background-3.jpg"); */
+  background: whitesmoke;
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  /* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.container {
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* .App {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  background: #222;
+  color: whitesmoke;
+  opacity: 0.85;
+  width: 80%;
+} */
+
+div.rules {
+  text-align: center;
+  justify-content: center;
+  line-height: 1.4;
+  margin: 20px 80px 20px 80px;
+  overflow: none;
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  margin: 0 auto;
+  background: whitesmoke;
+}
+
+div.grid {
+  position: relative;
+  background: #222;
+  align-items: center;
+  width: 70%;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15% 0 15%;
+  background-image: linear-gradient(
+    to right,
+    rgba(45, 0, 0, 0),
+    rgba(0, 0, 200, 1)
+  );
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  text-align: center;
+  width: 400px;
+}
+
+.navlinks {
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  margin: 25px;
+}
+
+.navlinks a {
+  text-decoration: none;
+}
+.grid:hover {
+  cursor: pointer;
+}
+
+div.cell {
+}
+
+.demo {
+  background-image: linear-gradient(
+    to right,
+    rgba(45, 0, 0, 0),
+    rgba(0, 0, 200, 1)
+  );
+  border-radius: 4px;
+  opacity: 0.31;
+}
+
+section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background: #222;
+  color: whitesmoke;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background: #222;
+  color: whitesmoke;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.counter {
+  background: #444;
+  color: white;
+  font-size: 0.9rem;
+  width: 4.8rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.clear {
+  background: blueviolet;
+  color: white;
+  font-size: 0.9rem;
+  width: 4.8rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.start {
+  background: #444;
+  color: white;
+  font-size: 0.9rem;
+  width: 4.8rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.run {
+  background: blue;
+  color: white;
+  font-size: 0.9rem;
+  width: 4.8rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+.pause {
+  background: #444;
+  color: white;
+  font-size: 0.9rem;
+  width: 4.8rem;
+  height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+footer {
+  padding: 25px;
+  background: whitesmoke;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 20px;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  h3,
+  h4 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
