@@ -15,7 +15,7 @@ Each cell with three neighbors becomes populated.
 
 ## The basis for the Algortithm for the game of life:
 
-`in javascript`
+`In JavaScript`
 
 ```
 // There are eight possible neighbors for a "cell". The above mentioned rules apply as so:
