@@ -1,6 +1,4 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Current deployment on netlify: (https://zealous-murdock-8481c3.netlify.app/)
-
 ## Cellular Automata and Conway's "Game of Life"
 
 Welcome to John Conway's "Game of Life"! This is a computer science classic from 1970, a program that simulates a cellular automaton (plural automata). It has connections to all kinds of different aspects of computer science and nature.
@@ -17,7 +15,7 @@ Each cell with three neighbors becomes populated.
 
 ## The basis for the Algortithm for the game of life:
 
-`in javascript`
+`In JavaScript`
 
 ```
 // There are eight possible neighbors for a "cell". The above mentioned rules apply as so:
