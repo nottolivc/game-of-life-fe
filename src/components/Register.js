@@ -59,6 +59,7 @@ const Register = (props) => {
           value={users.username}
           onChange={handleChange}
         />
+        <br />
         <TextField
           id="outlined-password-input"
           label="Password"
@@ -69,7 +70,7 @@ const Register = (props) => {
           value={users.password}
           onChange={handleChange}
         />
-
+        <br />
         <Button variant="contained" type="submit" color="primary">
           Sign Up
         </Button>
