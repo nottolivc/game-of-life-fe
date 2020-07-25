@@ -87,7 +87,7 @@ const Home = (props) => {
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
-    setTimeout(runSimulation, 160);
+    setTimeout(runSimulation, 90);
   }, [traverseNeighbors]);
   // run glider simulation
   const runGlider = useCallback(() => {
@@ -121,7 +121,7 @@ const Home = (props) => {
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
-    setTimeout(runGlider, 160);
+    setTimeout(runGlider, 190);
   }, [glider]);
 
   return (

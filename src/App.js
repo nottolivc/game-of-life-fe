@@ -6,6 +6,7 @@ import Register from "./components/Register";
 import Logout from "./components/Logout";
 import "./App.css";
 import { Route, NavLink } from "react-router-dom";
+//import PrivateRoute from "./utils/PrivateRoute";
 
 const App = () => {
   return (

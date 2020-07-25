@@ -59,6 +59,7 @@ const Login = (props) => {
           value={users.username}
           onChange={handleChange}
         />
+        <br />
         <TextField
           required
           id="outlined-password-input"
@@ -70,7 +71,7 @@ const Login = (props) => {
           value={users.password}
           onChange={handleChange}
         />
-
+        <br />
         <Button
           variant="contained"
           type="submit"
