@@ -87,7 +87,7 @@ const Home = (props) => {
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
-    setTimeout(runSimulation, 90);
+    setTimeout(runSimulation, 160);
   }, [traverseNeighbors]);
   // run glider simulation
   const runGlider = useCallback(() => {
@@ -121,7 +121,7 @@ const Home = (props) => {
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
-    setTimeout(runGlider, 190);
+    setTimeout(runGlider, 250);
   }, [glider]);
 
   return (
@@ -139,36 +139,36 @@ const Home = (props) => {
               pattern:
             </h2>
             {/* <h4>Grid Count: {75}</h4> */}
-            <div className="rules">
-              <h4>
-                The Rules:
-                <br />
-                <br />
-                For a space that is 'populated' : Each cell with one or no
-                neighbors dies in solitude.
-                <br />
-                Each cell with four or more neighbors dies, as if by
-                overpopulation.
-                <br />
-                Each cell with two or three neighbors survives, for a space that
-                is empty.
-                <br />
-                Each cell with three neighbors becomes populated.
-              </h4>
-            </div>
             <div>
-              {/* <img
-                src="https://ix.cs.uoregon.edu/~norris/cis330/projects/gameoflife.png"
-                alt=""
-                width="480px"
-                height="400px"
-              /> */}
               <img
                 src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Surveillance_re_8tkl.svg"
                 alt=""
                 width="480px"
                 height="400px"
               />
+              <img
+                src="https://ix.cs.uoregon.edu/~norris/cis330/projects/gameoflife.png"
+                alt=""
+                width="480px"
+                height="400px"
+              />
+              <div className="rules">
+                <h4>
+                  The Rules:
+                  <br />
+                  <br />
+                  -For a space that is 'populated' : Each cell with one or no
+                  neighbors dies in solitude.
+                  <br />
+                  -Each cell with four or more neighbors dies, as if by
+                  overpopulation.
+                  <br />
+                  -Each cell with two or three neighbors survives, for a space
+                  that is empty.
+                  <br />
+                  -Each cell with three neighbors becomes populated.
+                </h4>
+              </div>
               <br />
               <h4>
                 Click on the grid cells to create a shape like the example to

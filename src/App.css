@@ -47,7 +47,9 @@ div.login-form {
 } */
 
 div.rules {
-  text-align: center;
+  text-align: left;
+  display: flex;
+  align-items: center;
   justify-content: center;
   line-height: 1.4;
   margin: 20px 80px 20px 80px;
