@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef } from "react";
 import produce from "immer";
 import "../App.css";
-//import { Link } from "react-router-dom";
+import Presets from "../components/Presets";
 
 // now that number of rows and columns are created, run app
 // make sure they're mutable
@@ -184,6 +184,7 @@ const Home = (props) => {
                 alt=""
                 className="demo"
               />
+              <Presets />
               <h4>Speed:</h4>
               <input
                 type="range"
