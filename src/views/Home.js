@@ -166,6 +166,12 @@ const Home = (props) => {
                 width="480px"
                 height="400px"
               />
+              <img
+                src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Surveillance_re_8tkl.svg"
+                alt=""
+                width="480px"
+                height="400px"
+              />
               <br />
               <h4>
                 Enter shape you click on to create responds with cell automaton
