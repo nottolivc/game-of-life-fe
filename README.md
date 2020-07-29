@@ -5,9 +5,32 @@ Current deployment on netlify: (https://optimistic-meitner-bd22fa.netlify.app/)
 
 Welcome to John Conway's "Game of Life"! This is a computer science classic from 1970, a program that simulates a cellular automaton (plural automata). It has connections to all kinds of different aspects of computer science and nature.
 
+## Tech Used
+
+- React
+- Material UI/Design
+- React Hooks
+- Express
+- Node.js
+- SQLite
+- PostgreSQL
+- Heroku
+- bcryptjs
+- npm
+- json web tokens
+- Knex ORM
+- Session-Knex-Express
+- CORS
+- Three.js
+- Threejs Fiber
+- Drei
+- Axios
+- React spring & react-router
+
 ## Rules
 
 The Rules:
+
 For a space that is 'populated':
 Each cell with one or no neighbors dies, as if by solitude.
 Each cell with four or more neighbors dies, as if by overpopulation.
@@ -17,7 +40,7 @@ Each cell with three neighbors becomes populated.
 
 ## The basis for the Algortithm for the game of life:
 
-`in javascript`
+`In JavaScript`
 
 ```
 // There are eight possible neighbors for a "cell". The above mentioned rules apply as so:
