@@ -15,8 +15,7 @@ const PresetForm = ({ addPreset }) => {
       <form onSubmit={handleSubmit}>
         <br />
         <h4>
-          Add new life forms to the Game with new Name, link to its shape, then
-          plot the grid and run the Simulation
+          <strong>Add new life forms</strong> to the Game with new Name/Link
         </h4>
         <label>Name </label>
         <input
