@@ -144,25 +144,25 @@ const Home = (props) => {
                 The Rules:
                 <br />
                 <br />
-                For a space that is 'populated': Each cell with one or no
-                neighbors dies, solitude.
+                For a space that is 'populated' : Each cell with one or no
+                neighbors dies in solitude.
                 <br />
                 Each cell with four or more neighbors dies, as if by
                 overpopulation.
                 <br />
-                Each cell with two or three neighbors survives. For a space that
-                is 'empty.'
+                Each cell with two or three neighbors survives, for a space that
+                is empty.
                 <br />
                 Each cell with three neighbors becomes populated.
               </h4>
             </div>
             <div>
-              <img
+              {/* <img
                 src="https://ix.cs.uoregon.edu/~norris/cis330/projects/gameoflife.png"
                 alt=""
                 width="480px"
                 height="400px"
-              />
+              /> */}
               <img
                 src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Surveillance_re_8tkl.svg"
                 alt=""
@@ -183,6 +183,7 @@ const Home = (props) => {
               />
               <Presets />
               <h4>-Login to Save Settings-</h4>
+              <h5>How many generations will this iteration last?</h5>
               <h4> Speed </h4>
               <input
                 type="range"
@@ -275,7 +276,7 @@ const Home = (props) => {
                     width: 12.5,
                     height: 12.5,
                     backgroundColor: grid[i][j] ? "#00ddff" : null,
-                    border: "solid 1px #222",
+                    border: "solid 1px #333",
                     borderRadius: "50%",
                     padding: "2px",
                   }}
