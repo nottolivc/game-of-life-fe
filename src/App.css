@@ -193,8 +193,8 @@ button:hover {
   text-align: center;
   margin: 0 auto;
   justify-content: center;
-  background: rgb(219, 219, 219);
-  color: #111;
+  background: #222;
+  color: rgb(219, 219, 219);
   border-radius: 4px;
   width: 400px;
   padding: 5px 0 5px 0;
