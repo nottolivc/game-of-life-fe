@@ -147,7 +147,7 @@ const Home = (props) => {
                 height="400px"
               />
               <img
-                src="https://ix.cs.uoregon.edu/~norris/cis330/projects/gameoflife.png"
+                src="https://morphocode.com/wp-content/uploads/2012/03/game-of-life-with-memory.jpg"
                 alt=""
                 width="480px"
                 height="400px"

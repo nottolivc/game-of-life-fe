@@ -22,10 +22,6 @@ body {
   text-align: center;
 }
 
-/* h4 {
-  line-height: 1.7rem;
-} */
-
 div.login-form {
   display: flex;
   justify-content: center;
@@ -33,18 +29,9 @@ div.login-form {
   flex-flow: column wrap;
 }
 
-/* .App {
-  display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
+.container {
   background: #222;
-  color: whitesmoke;
-  opacity: 0.85;
-  width: 80%;
-} */
+}
 
 div.rules {
   text-align: left;
@@ -224,18 +211,18 @@ footer a {
   color: #444;
 }
 
-/* .grid {
+.grid {
   animation: y-axis-animation 2s ease-in-out 0s infinite alternate;
 }
 
 @keyframes y-axis-animation {
   from {
-    transform: rotateY(20deg);
+    transform: rotateY(10deg);
   }
   to {
-    transform: rotateY(-20deg);
+    transform: rotateY(-10deg);
   }
-} */
+}
 
 @media (max-width: 768px) {
   header {
