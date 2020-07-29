@@ -22,9 +22,9 @@ body {
   text-align: center;
 }
 
-h4 {
+/* h4 {
   line-height: 1.7rem;
-}
+} */
 
 div.login-form {
   display: flex;
