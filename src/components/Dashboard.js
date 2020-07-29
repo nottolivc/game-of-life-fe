@@ -3,7 +3,8 @@ import { Canvas, useFrame } from "react-three-fiber";
 import { softShadows, MeshWobbleMaterial, OrbitControls } from "drei";
 import "./Dashboard.css";
 import { useSpring, a } from "react-spring/three";
-
+//
+import Presets from "./Presets";
 // shadows
 softShadows();
 
@@ -49,6 +50,7 @@ const Dashboard = (props) => {
       </header>
       <div className="canvas">
         {/* canvas cannot take html elements */}
+        <Presets />
         <Canvas
           colorManagement
           shadowMap

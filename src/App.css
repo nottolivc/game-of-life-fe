@@ -189,6 +189,17 @@ button:hover {
   border-radius: 2px;
 }
 
+.form-container {
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  background: rgb(219, 219, 219);
+  color: #111;
+  border-radius: 4px;
+  width: 400px;
+  padding: 5px 0 5px 0;
+}
+
 footer {
   padding: 25px;
   background: whitesmoke;
