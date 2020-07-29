@@ -185,7 +185,8 @@ const Home = (props) => {
                 className="demo"
               />
               <Presets />
-              <h4>Speed:</h4>
+              <h4>-Login to Save Settings-</h4>
+              <h4> Speed:</h4>
               <input
                 type="range"
                 min="0"
