@@ -19,9 +19,10 @@ const Login = (props) => {
     event.preventDefault();
     console.log("users", users);
     axios
-      .post("https://young-island-96277.herokuapp.com/auth/login", users, {
-        withCredentials: true,
-      })
+      .post("https://young-island-96277.herokuapp.com/auth/login", users)
+      // {
+      //   withCredentials: true,
+      // })
       .then((result) => {
         console.log(result.data);
         localStorage.setItem("token", result.data.token);
