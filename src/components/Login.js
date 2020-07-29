@@ -17,7 +17,7 @@ const Login = (props) => {
 
   const login = (event) => {
     event.preventDefault();
-    console.log("users", users);
+    // console.log("users", users);
     axios
       .post("https://murmuring-refuge-82582.herokuapp.com/auth/login", users)
       // {
@@ -35,6 +35,7 @@ const Login = (props) => {
           //   console.log(error.response.headers);
         } else {
           console.log("Error", error.message);
+          alert(error);
         }
         console.log(error.config);
       });
