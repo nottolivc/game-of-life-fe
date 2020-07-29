@@ -49,7 +49,7 @@ const Dashboard = (props) => {
       </header>
       <div className="canvas">
         {/* canvas cannot take html elements */}
-        {/* <Presets /> */}
+        <h4>Move the mouse or trackpad to rotate the 3d objects</h4>
         <Canvas
           colorManagement
           shadowMap

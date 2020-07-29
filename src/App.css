@@ -98,6 +98,7 @@ div.grid {
 }
 
 div.cell {
+  border-radius: 50%;
 }
 
 div.grid {
@@ -153,7 +154,7 @@ button:hover {
   height: 2.5rem;
   font-family: "Roboto", sans-serif;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .start {
@@ -164,7 +165,7 @@ button:hover {
   height: 2.5rem;
   font-family: "Roboto", sans-serif;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .run {
@@ -175,7 +176,7 @@ button:hover {
   height: 2.5rem;
   font-family: "Roboto", sans-serif;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .pause {
@@ -186,7 +187,7 @@ button:hover {
   height: 2.5rem;
   font-family: "Roboto", sans-serif;
   margin: 5px;
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .form-container {
@@ -198,6 +199,11 @@ button:hover {
   border-radius: 4px;
   width: 400px;
   padding: 5px 0 5px 0;
+}
+
+input {
+  background: #aaa;
+  border-radius: 4px;
 }
 
 footer {

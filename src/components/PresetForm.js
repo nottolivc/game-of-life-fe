@@ -18,7 +18,7 @@ const PresetForm = ({ addPreset }) => {
           Add New life Forms to the Game with new Name and Link to its shape,
           then plot and run the Simulation:
         </h4>
-        <label>Name: </label>
+        <label>Name </label>
         <input
           type="text"
           className="input"

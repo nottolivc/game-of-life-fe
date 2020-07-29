@@ -143,6 +143,7 @@ const Home = (props) => {
               <h4>
                 The Rules:
                 <br />
+                <br />
                 For a space that is 'populated': Each cell with one or no
                 neighbors dies, solitude.
                 <br />
@@ -156,10 +157,6 @@ const Home = (props) => {
               </h4>
             </div>
             <div>
-              <h4>
-                Enter any of the shapes you see below with your mouse, run to
-                see the results:
-              </h4>
               <img
                 src="https://ix.cs.uoregon.edu/~norris/cis330/projects/gameoflife.png"
                 alt=""
@@ -174,8 +171,8 @@ const Home = (props) => {
               />
               <br />
               <h4>
-                Enter shape you click on to create responds with cell automaton
-                results:
+                Click on the grid cells to create a shape like the example to
+                see it respond with cell automaton results
               </h4>
               <img
                 src="https://i1.wp.com/blog.faq400.com/wp-content/uploads/2020/04/1024px-Game_of_life_glider_gun.svg-1.png?fit=1024%2C299&ssl=1&resize=1280%2C720"
@@ -186,7 +183,7 @@ const Home = (props) => {
               />
               <Presets />
               <h4>-Login to Save Settings-</h4>
-              <h4> Speed:</h4>
+              <h4> Speed </h4>
               <input
                 type="range"
                 min="0"
@@ -278,8 +275,9 @@ const Home = (props) => {
                     width: 12.5,
                     height: 12.5,
                     backgroundColor: grid[i][j] ? "#00ddff" : null,
-                    border: "solid 1px #333",
-                    borderRadius: "4px",
+                    border: "solid 1px #222",
+                    borderRadius: "50%",
+                    padding: "2px",
                   }}
                 />
               ))
