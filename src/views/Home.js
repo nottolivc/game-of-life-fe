@@ -79,6 +79,7 @@ const Home = (props) => {
               gridCopy[i][j] = 0;
             } else if (currGrid[i][j] === 0 && neighbors === 3) {
               gridCopy[i][j] = 1;
+              console.log(currGrid);
             }
           }
         }
@@ -127,9 +128,14 @@ const Home = (props) => {
   return (
     <>
       <header>
-        <br />
         <h1>Welcome to Conways Game of Life, Begin!</h1>
-        <br />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          <polygon fill="white" points="0,100 100,0 100,100" />
+        </svg>
       </header>
       <div className="container">
         <div className="App">
@@ -170,17 +176,26 @@ const Home = (props) => {
                 </h4>
               </div>
               <br />
+              <div className="divider">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                >
+                  <polygon fill="white" points="0,100 100,0 100,100" />
+                </svg>
+              </div>
               <h4>
                 Click on the grid cells to create a shape like the example to
                 see it respond with cell automaton results
               </h4>
-              <img
+              {/* <img
                 src="https://i1.wp.com/blog.faq400.com/wp-content/uploads/2020/04/1024px-Game_of_life_glider_gun.svg-1.png?fit=1024%2C299&ssl=1&resize=1280%2C720"
                 width="140px"
                 height="80px"
                 alt=""
                 className="demo"
-              />
+              /> */}
               <Presets />
               <h4>-Login to Save Settings-</h4>
               <h5>How many generations will this iteration last?</h5>
