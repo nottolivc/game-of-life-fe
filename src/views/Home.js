@@ -54,7 +54,8 @@ const Home = (props) => {
   runningRef.current = running;
   const [generation, setGeneration] = useState(0);
   // set state logic to control range of speed input for timeout delay
-
+  var gridStore = useRef(grid);
+  gridStore.current = grid;
   // if not currently running, use callback to simulate update with setTimeout time value
   const runSimulation = useCallback(() => {
     if (!runningRef.current) {
@@ -79,18 +80,20 @@ const Home = (props) => {
               gridCopy[i][j] = 0;
             } else if (currGrid[i][j] === 0 && neighbors === 3) {
               gridCopy[i][j] = 1;
-              console.log(currGrid);
+
+              // gridStore = currGrid;
             }
           }
         }
       });
     });
+
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
     setTimeout(runSimulation, 160);
   }, [traverseNeighbors]);
-  // run glider simulation
+  //run glider simulation
   const runGlider = useCallback(() => {
     if (!runningRef.current) {
       return;
