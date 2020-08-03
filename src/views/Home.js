@@ -37,7 +37,20 @@ const Home = (props) => {
     [-1, -2],
   ];
 
-  const crossValues = [[0, 1], []];
+  const crossValues = [
+    [-1, 0],
+    [0, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+    [0, 0],
+    [0, 1],
+    [2, 0],
+    [1, 0],
+    [2, 0],
+    [3, 0],
+    [4, 0],
+  ];
   // creating a grid generator
   const createGrid = () => {
     const rows = [];
@@ -109,6 +122,23 @@ const Home = (props) => {
         for (let i = 0; i < numRows; i++) {
           for (let j = 0; j < numCols; j++) {
             gliderValues.forEach(([x, y]) => {
+              if (i === midX && j === midY) {
+                gridCopy[i + x][j + y] = 1;
+              }
+            });
+          }
+        }
+      });
+    });
+  };
+
+  const runCross = () => {
+    setGrid((currGrid) => {
+      return produce(currGrid, (gridCopy) => {
+        // Use a for loop to populate the rows array
+        for (let i = 0; i < numRows; i++) {
+          for (let j = 0; j < numCols; j++) {
+            crossValues.forEach(([x, y]) => {
               if (i === midX && j === midY) {
                 gridCopy[i + x][j + y] = 1;
               }
@@ -191,6 +221,14 @@ const Home = (props) => {
               /> */}
               <Presets />
               <h4>-Login to Save Settings-</h4>
+              <h5>Test out the Cross Form:</h5>
+              <button
+                onClick={() => {
+                  runCross();
+                }}
+              >
+                Cross
+              </button>
               <h5>How many generations will this iteration last?</h5>
               <h4> Stop Simulation and Change Speeds </h4>
               <button value={speed} onClick={() => setSpeed(speed + 20)}>
@@ -259,6 +297,7 @@ const Home = (props) => {
             >
               Clear
             </button>
+            <br />
           </section>
           {/* set div size with style and then run logic to map out cells */}
           <div
