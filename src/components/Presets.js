@@ -16,7 +16,7 @@ function LifeForm({ preset, index, removePreset }) {
 const Presets = (props) => {
   const [presets, setPreset] = useState([
     // { name: "Glider" },
-    { name: "GliderGun" },
+    { name: "Your [x,y] coordinates here" },
   ]);
 
   const addPreset = (name) => {

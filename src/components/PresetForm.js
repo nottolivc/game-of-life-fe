@@ -14,9 +14,7 @@ const PresetForm = ({ addPreset }) => {
     <>
       <form onSubmit={handleSubmit}>
         <br />
-        <h4>
-          <strong>Add new life forms</strong> to the Game with new Name/Link
-        </h4>
+        <h4>Create life forms for Game with link to its [x,y] values:</h4>
         <label>Name </label>
         <input
           type="text"
