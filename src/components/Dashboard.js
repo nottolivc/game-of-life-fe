@@ -45,11 +45,10 @@ const Dashboard = (props) => {
       <header>
         <br />
         <h1>Welcome to Conways Game of Life, Begin!</h1>
-        <br />
+        <h5>Move the mouse or trackpad to rotate the 3d objects</h5>
       </header>
       <div className="canvas">
         {/* canvas cannot take html elements */}
-        <h4>Move the mouse or trackpad to rotate the 3d objects</h4>
         <Canvas
           colorManagement
           shadowMap
