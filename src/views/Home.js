@@ -176,10 +176,10 @@ const Home = (props) => {
                   <polygon fill="white" points="0,100 100,0 100,100" />
                 </svg>
               </div>
-              <h4>
-                Click on the grid cells to create a shape like the example to
-                see it respond with cell automaton results
-              </h4>
+              <h2>
+                Click on the grid cells to create a shape, then hit 'Run' to see
+                results
+              </h2>
               {/* <img
                 src="https://i1.wp.com/blog.faq400.com/wp-content/uploads/2020/04/1024px-Game_of_life_glider_gun.svg-1.png?fit=1024%2C299&ssl=1&resize=1280%2C720"
                 width="140px"
@@ -190,7 +190,7 @@ const Home = (props) => {
               <Presets />
               <h4>-Login to Save Settings-</h4>
               <h5>How many generations will this iteration last?</h5>
-              <h4> Stop Simulation and Change Speed </h4>
+              <h4> Stop Simulation and Change Speeds </h4>
               <button value={speed} onClick={() => setSpeed(speed + 20)}>
                 Slow Down
               </button>
@@ -213,7 +213,7 @@ const Home = (props) => {
                 }
               }}
             >
-              {running ? "stop" : "run"}
+              {running ? "Stop" : "Run"}
             </button>
             <button
               className="run"
@@ -229,7 +229,7 @@ const Home = (props) => {
                 setRunning(!running);
               }}
             >
-              {running ? "pause" : "pause"}
+              {running ? "Pause" : "Pause"}
             </button>
             <button
               className="start"
@@ -246,7 +246,7 @@ const Home = (props) => {
                 setGrid(rows);
               }}
             >
-              random
+              Random
             </button>
             <button
               className="clear"
