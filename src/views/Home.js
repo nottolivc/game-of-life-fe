@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import produce from "immer";
 import "../App.css";
 import Presets from "../components/Presets";
@@ -9,19 +9,9 @@ let numRows = 50;
 let numCols = 75;
 
 const Home = (props) => {
-  // setting counter logic
+  // setting speed counter lstate
+  let [speed, setSpeed] = useState(175);
 
-  let [speed, setSpeed] = useState(240);
-  const handleChange = (event) => {
-    // setSpeed({
-    //   ...speed,
-    // });
-    setSpeed(event.target.value);
-    console.log(event.target.value);
-  };
-  // useEffect(() => {
-  //   console.log(speed);
-  // }, [speed]);
   // setting conways rules for possible values for traversal in 9x9 grid of cells
   const traverseNeighbors = [
     [0, 1],
@@ -105,7 +95,8 @@ const Home = (props) => {
     setTimeout(runSimulation, speed);
     console.log(speed);
   }, [traverseNeighbors, speed]);
-  //run glider simulation
+
+  //run custom glider simulation
   const runGlider = useCallback(() => {
     if (!runningRef.current) {
       return;
@@ -159,7 +150,6 @@ const Home = (props) => {
               Press Random + Run to see Results, or select starting cell
               pattern:
             </h2>
-            {/* <h4>Grid Count: {75}</h4> */}
             <div>
               <img
                 src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/Surveillance_re_8tkl.svg"
@@ -214,14 +204,13 @@ const Home = (props) => {
               <Presets />
               <h4>-Login to Save Settings-</h4>
               <h5>How many generations will this iteration last?</h5>
-              <h4> Speed </h4>
-              <input
-                value={speed}
-                type="range"
-                min="100"
-                max="1000"
-                onChange={handleChange}
-              ></input>
+              <h4> Stop Simulation and Change Speed </h4>
+              <button value={speed} onClick={() => setSpeed(speed + 20)}>
+                Slow Down
+              </button>
+              <button value={speed} onClick={() => setSpeed(speed - 20)}>
+                Speed Up
+              </button>
             </div>
             <h4>Generation: {generation}</h4>
           </section>
