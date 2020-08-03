@@ -6,7 +6,7 @@ import Presets from "../components/Presets";
 // now that number of rows and columns are created, run app
 // make sure they're mutable
 let numRows = 50;
-let numCols = 50;
+let numCols = 75;
 
 const Home = (props) => {
   // setting speed counter lstate
@@ -36,6 +36,8 @@ const Home = (props) => {
     [-2, -1],
     [-1, -2],
   ];
+
+  const crossValues = [[0, 1], []];
   // creating a grid generator
   const createGrid = () => {
     const rows = [];
@@ -292,7 +294,9 @@ const Home = (props) => {
         </div>
         <footer>
           <br />
-          <a href="https://github.com/nottolivc/conways-game">Github</a>
+          <a href="https://github.com/nottolivc/game-of-life-fe/tree/development">
+            Github
+          </a>
           <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
             About
           </a>
