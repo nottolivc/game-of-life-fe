@@ -6,7 +6,7 @@ import Presets from "../components/Presets";
 // now that number of rows and columns are created, run app
 // make sure they're mutable
 let numRows = 50;
-let numCols = 75;
+let numCols = 50;
 
 const Home = (props) => {
   // setting speed counter lstate
@@ -23,16 +23,19 @@ const Home = (props) => {
     [1, 0],
     [-1, 0],
   ];
-  // creating custom glide off function
+  // set midpoints for grid x, y coordinates for later use
+  const midX = Math.floor(numRows / 2);
+  const midY = Math.floor(numCols / 2);
   // and storing 2d array for glider test later
-  const glider = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2], [20], [50]];
-  // const gliderTest = [
-  //   [0, 0, 1, 0, 0],
-  //   [0, 1, 0, 1, 0],
-  //   [0, 1, 1, 1, 0],
-  //   [0, 0, 0, 1, 0],
-  //   [0, 1, 0, 0, 1],
-  // ];
+  // const glider = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2], [20], [50]];
+  // set coordinates for glider for later use
+  const gliderValues = [
+    [0, 0],
+    [-1, 0],
+    [-2, 0],
+    [-2, -1],
+    [-1, -2],
+  ];
   // creating a grid generator
   const createGrid = () => {
     const rows = [];
@@ -93,43 +96,26 @@ const Home = (props) => {
       setGeneration((prevState) => (prevState += 1));
     }
     setTimeout(runSimulation, speed);
-    console.log(speed);
+    // console.log(speed);
   }, [traverseNeighbors, speed]);
 
   //run custom glider simulation
-  const runGlider = useCallback(() => {
-    if (!runningRef.current) {
-      return;
-    }
+  const runGlider = () => {
     setGrid((currGrid) => {
       return produce(currGrid, (gridCopy) => {
-        // create double for loop to check every value in the grid and update
-        // produce sets immutable new grid
+        // Use a for loop to populate the rows array
         for (let i = 0; i < numRows; i++) {
           for (let j = 0; j < numCols; j++) {
-            let neighbors = 0;
-            glider.forEach(([x, y]) => {
-              const newI = i + x;
-              const newJ = j + y;
-              if (newI >= 0 && newI < numRows && newJ >= 0 && newJ < numCols) {
-                neighbors += currGrid[newI][newJ];
+            gliderValues.forEach(([x, y]) => {
+              if (i === midX && j === midY) {
+                gridCopy[i + x][j + y] = 1;
               }
             });
-
-            if (neighbors < 2 || neighbors > 3) {
-              gridCopy[i][j] = 0;
-            } else if (currGrid[i][j] === 0 && neighbors === 3) {
-              gridCopy[i][j] = 1;
-            }
           }
         }
       });
     });
-    if (setGrid) {
-      setGeneration((prevState) => (prevState += 1));
-    }
-    setTimeout(runGlider, 250);
-  }, [glider]);
+  };
 
   return (
     <>
@@ -232,14 +218,10 @@ const Home = (props) => {
             <button
               className="run"
               onClick={() => {
-                setRunning(!running);
-                if (!running) {
-                  runningRef.current = true;
-                  runGlider();
-                }
+                runGlider();
               }}
             >
-              {running ? "stop" : "glide off"}
+              Glider
             </button>
             <button
               className="pause"
@@ -270,6 +252,7 @@ const Home = (props) => {
               className="clear"
               onClick={() => {
                 setGrid(createGrid());
+                setGeneration(0);
               }}
             >
               clear
