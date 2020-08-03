@@ -212,13 +212,6 @@ const Home = (props) => {
                 Click on the grid cells to create a shape, then hit 'Run' to see
                 results
               </h2>
-              {/* <img
-                src="https://i1.wp.com/blog.faq400.com/wp-content/uploads/2020/04/1024px-Game_of_life_glider_gun.svg-1.png?fit=1024%2C299&ssl=1&resize=1280%2C720"
-                width="140px"
-                height="80px"
-                alt=""
-                className="demo"
-              /> */}
               <Presets />
               <h4>-Login to Save Settings-</h4>
               <h5>Test out the Cross Form:</h5>

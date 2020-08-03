@@ -53,12 +53,12 @@ header {
 
 header {
   position: relative;
-  height: 300px;
+  height: 200px;
 }
 
 h1 {
-  padding: 100px 0;
-  font-size: 40px;
+  padding: 20px 0;
+  font-size: 2.4rem;
   text-align: center;
 }
 
