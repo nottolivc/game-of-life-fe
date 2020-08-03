@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import produce from "immer";
 import "../App.css";
 import Presets from "../components/Presets";
@@ -11,6 +11,17 @@ let numCols = 75;
 const Home = (props) => {
   // setting counter logic
 
+  let [speed, setSpeed] = useState(240);
+  const handleChange = (event) => {
+    // setSpeed({
+    //   ...speed,
+    // });
+    setSpeed(event.target.value);
+    console.log(event.target.value);
+  };
+  // useEffect(() => {
+  //   console.log(speed);
+  // }, [speed]);
   // setting conways rules for possible values for traversal in 9x9 grid of cells
   const traverseNeighbors = [
     [0, 1],
@@ -91,8 +102,9 @@ const Home = (props) => {
     if (setGrid) {
       setGeneration((prevState) => (prevState += 1));
     }
-    setTimeout(runSimulation, 160);
-  }, [traverseNeighbors]);
+    setTimeout(runSimulation, speed);
+    console.log(speed);
+  }, [traverseNeighbors, speed]);
   //run glider simulation
   const runGlider = useCallback(() => {
     if (!runningRef.current) {
@@ -204,10 +216,11 @@ const Home = (props) => {
               <h5>How many generations will this iteration last?</h5>
               <h4> Speed </h4>
               <input
+                value={speed}
                 type="range"
-                min="0"
-                max="100"
-                // onChange={handleChange}
+                min="100"
+                max="1000"
+                onChange={handleChange}
               ></input>
             </div>
             <h4>Generation: {generation}</h4>
