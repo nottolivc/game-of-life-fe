@@ -211,6 +211,8 @@ const Home = (props) => {
               <button value={speed} onClick={() => setSpeed(speed - 20)}>
                 Speed Up
               </button>
+              <br />
+              <p>Speed: {speed} ms delay</p>
             </div>
             <h4>Generation: {generation}</h4>
           </section>
