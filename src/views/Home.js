@@ -255,7 +255,7 @@ const Home = (props) => {
                 setGeneration(0);
               }}
             >
-              clear
+              Clear
             </button>
           </section>
           {/* set div size with style and then run logic to map out cells */}
