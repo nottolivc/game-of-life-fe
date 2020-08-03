@@ -31,7 +31,7 @@ const Login = (props) => {
       .catch((error) => {
         if (error.response) {
           console.log(error.response.data);
-          alert(error.response);
+          alert(error.response.data.message);
           //   console.log(error.response.status);
           //   console.log(error.response.headers);
         } else {
