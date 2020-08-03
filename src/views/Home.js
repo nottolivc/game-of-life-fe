@@ -232,6 +232,7 @@ const Home = (props) => {
               </button>
               <br />
               <p>Speed: {speed} ms delay</p>
+              <br />
             </div>
             <h4>Generation: {generation}</h4>
           </section>
