@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Development branch on Netlify: (https://silly-noyce-305b0a.netlify.app/)
+<br />
 Master deployment on Netlify: (https://optimistic-meitner-bd22fa.netlify.app/)
 
 ## Cellular Automata and Conway's "Game of Life"
@@ -20,8 +21,6 @@ Welcome to John Conway's "Game of Life"! This is a computer science classic from
 - npm
 - json web tokens
 - Knex ORM
-- Session-Knex-Express
-- CORS
 - Three.js
 - Threejs Fiber
 - Drei
